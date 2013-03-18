@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<h1>Reports</h1>
+
+	<ul>
+		{% if reports %}
+			{% for r in reports %}
+				<li><a href="{{r.get_absolute_url}}">{{r}}</a></li>
+			{% endfor %}
+		{% else %}
+			<li>None Available</li>
+		{% endif %}
+	</ul>
+{% endblock %}
